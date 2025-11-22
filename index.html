@@ -6,6 +6,10 @@
     <!-- 基础视口设置，优化移动设备显示 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     
+    <!-- 增强型移动设备适配 -->
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+    
     <!-- iOS 和 Safari 特定设置 -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
@@ -25,11 +29,23 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22none%22%20stroke%3D%22%23ff0800%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%201%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%2F%3E%3C%2Fsvg%3E" />
     <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2232%22%20height%3D%2232%22%20fill%3D%22none%22%20stroke%3D%22%23ff0800%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M19%2014c1.49-1.46%203-3.21%203-5.5A5.5%205.5%200%200%200%2016.5%203c-1.76%200-3%20.5-4.5%202-1.5-1.5-2.74-2-4.5-2A5.5%205.5%200%200%200%201%208.5c0%202.3%201.5%204.05%203%205.5l7%207Z%22%2F%3E%3C%2Fsvg%3E" />
     
-    <title>lrx爱xyx</title>
-    <script type="module" crossorigin src="./assets/index-VljDJLyF.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-B5O40b03.css">
+    <title>lrx爱xyx - 我们的爱情记录</title>
+    <script type="module" crossorigin src="./assets/optimized-index-tGviEqeA.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/optimized-index-Cs8F2c2P.css">
   </head>
-  <body>
+  <body style="touch-action: manipulation; -webkit-tap-highlight-color: transparent;">
     <div id="app"></div>
+    <!-- 移动设备优化脚本 -->
+    <script>
+      // 移动设备检测和优化
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      if (isMobile) {
+        document.documentElement.classList.add('mobile-device');
+        // 添加触摸优化
+        document.addEventListener('touchmove', function(e) {
+          if (e.scale !== 1) e.preventDefault();
+        }, { passive: false });
+      }
+    </script>
   </body>
 </html>
